@@ -21,9 +21,11 @@
       {% include 'includes/header.html'%}   
     </header>
     <main> 
-      {% block content %}Контент не подвезли{% endblock %}
+      {% block content %}
+      <h1>Где эта ебучая надпись</h1>
+      {% endblock %}
     </main>   
-    <footer>
+    <footer class="border-top text-center py-3">
      {% include 'includes/footer.html' %}
     </footer>
   </body>
