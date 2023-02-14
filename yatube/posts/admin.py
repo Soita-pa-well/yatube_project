@@ -12,7 +12,14 @@ class PostAdmin(admin.ModelAdmin):
     search_fields = ('text',)
     # Добавляем возможность фильтрации по дате
     list_filter = ('pub_date',)
-    empty_value_display = '-пусто-'
+    empty_value_display = '-empty-'
+
+
+class GroupAdmin(admin.ModelAdmin):
+    list_display = ('pk', 'title', 'slug', 'description',)
+    search_filds = ('description',)
+    list_filter = ('title')
+    empty_value_display = '-empty-'
 
 
 admin.site.register(Post, PostAdmin)
